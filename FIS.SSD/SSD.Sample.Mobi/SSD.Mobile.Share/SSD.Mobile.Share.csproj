@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C11AA5BE-F071-4EE9-AAEF-4B7F0B1534E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SSD.Mobile.Share</RootNamespace>
+    <AssemblyName>SSD.Mobile.Share</AssemblyName>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Base\BaseModel.cs" />
+    <Compile Include="BusinessLogics\BanLeBiz.cs" />
+    <Compile Include="BusinessLogics\BanSiTTBiz.cs" />
+    <Compile Include="BusinessLogics\ChiPhiBiz.cs" />
+    <Compile Include="BusinessLogics\LocationStoreBiz.cs" />
+    <Compile Include="BusinessLogics\NhapHangBiz.cs" />
+    <Compile Include="BusinessLogics\OverViewBiz.cs" />
+    <Compile Include="BusinessLogics\SanPhamBiz.cs" />
+    <Compile Include="BusinessLogics\TamUngBiz.cs" />
+    <Compile Include="BusinessLogics\ThanhToanBiz.cs" />
+    <Compile Include="BusinessLogics\ThuKhacBiz.cs" />
+    <Compile Include="BusinessLogics\UserBiz.cs" />
+    <Compile Include="Models\BanLeModel.cs" />
+    <Compile Include="Models\ChiPhiModel.cs" />
+    <Compile Include="Models\CongNoModel.cs" />
+    <Compile Include="Models\LocationStoreModel.cs" />
+    <Compile Include="Models\NhapHangCNModel.cs" />
+    <Compile Include="Models\NhapHangModel.cs" />
+    <Compile Include="Models\NhapHangPlanModel.cs" />
+    <Compile Include="Models\OverViewModel.cs" />
+    <Compile Include="Models\TamUngModel.cs" />
+    <Compile Include="Models\ThuKhacModel.cs" />
+    <Compile Include="Models\TiemMatModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Platform\INetworkService.cs" />
+    <Compile Include="Platform\IPlatform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BanLeCTViewModel.cs" />
+    <Compile Include="ViewModels\LocationStoreViewModel.cs" />
+    <Compile Include="ViewModels\NhapHangCTViewModel.cs" />
+    <Compile Include="ViewModels\GiamSatViewModel.cs" />
+    <Compile Include="ViewModels\ChiPhiViewModel.cs" />
+    <Compile Include="ViewModels\CongNoViewModel.cs" />
+    <Compile Include="ViewModels\NhapHangPlanViewModel.cs" />
+    <Compile Include="ViewModels\NhapHangCNViewModel.cs" />
+    <Compile Include="ViewModels\NhapHangListViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\TamUngViewModel.cs" />
+    <Compile Include="ViewModels\ThuKhacViewModel.cs" />
+    <Compile Include="ViewModels\ThanhToanViewModel.cs" />
+    <Compile Include="Base\IPageSource.cs" />
+    <Compile Include="Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BanLeListViewModel.cs" />
+    <Compile Include="ViewModels\OverViewViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\SSD.Framework.Portable\SSD.Framework.Portable.csproj">
+      <Project>{3d3d7e34-4a8e-4bc7-b84c-577fe6532ef3}</Project>
+      <Name>SSD.Framework.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSD.Mobile.Agents\SSD.Mobile.Agents.csproj">
+      <Project>{c311c808-3458-4bff-9c26-7c9a92f557df}</Project>
+      <Name>SSD.Mobile.Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSD.Mobile.Common\SSD.Mobile.Common.csproj">
+      <Project>{4cfceb39-9cda-46a3-9c0c-5ae075b7850c}</Project>
+      <Name>SSD.Mobile.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.CrossCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo-MvvmCross\_ Core.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

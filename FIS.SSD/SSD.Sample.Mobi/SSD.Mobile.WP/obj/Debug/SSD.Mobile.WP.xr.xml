@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="IsBusy" />
+    <RootPropertyPathName Name="Model" />
+    <RootPropertyPathName Name="TongTien" />
+    <RootPropertyPathName Name="ChietKhau" />
+    <RootPropertyPathName Name="TienHang" />
+    <RootPropertyPathName Name="ListBanLeCT" />
+    <RootPropertyPathName Name="DonGia" />
+    <RootPropertyPathName Name="SLBan" />
+    <RootPropertyPathName Name="DVT" />
+    <RootPropertyPathName Name="Ten" />
+    <RootPropertyPathName Name="NgayTT" />
+    <RootPropertyPathName Name="DataContext" />
+    <RootPropertyPathName Name="BackMenuCommand" />
+    <RootPropertyPathName Name="BackCommand" />
+    <RootPropertyPathName Name="Hello" />
+    <RootPropertyPathName Name="ListModel" />
+    <RootPropertyPathName Name="StoreAddress" />
+    <RootPropertyPathName Name="StoreName" />
+    <RootPropertyPathName Name="IpClient" />
+    <RootPropertyPathName Name="ChietKhauHang" />
+    <RootPropertyPathName Name="ListNhapHangCT" />
+    <RootPropertyPathName Name="GiaNhap" />
+    <RootPropertyPathName Name="SoLuong" />
+    <RootPropertyPathName Name="GhiChu" />
+    <RootPropertyPathName Name="TrangThai" />
+    <RootPropertyPathName Name="NgayGiao" />
+    <RootPropertyPathName Name="TenNCC" />
+    <RootPropertyPathName Name="ConNo" />
+    <RootPropertyPathName Name="OverviewModel" />
+    <RootPropertyPathName Name="BanLe" />
+    <RootPropertyPathName Name="CreatedAt" />
+    <RootPropertyPathName Name="NextTimeCommand" />
+    <RootPropertyPathName Name="NavTitle" />
+    <RootPropertyPathName Name="BackTimeCommand" />
+    <RootPropertyPathName Name="FilterCommand" />
+    <RootPropertyPathName Name="Home" />
+    <RootPropertyPathName Name="Monthly" />
+    <RootPropertyPathName Name="Weekly" />
+    <RootPropertyPathName Name="Daily" />
+    <RootPropertyPathName Name="Option" />
+    <RootPropertyPathName Name="ListNhapHang" />
+    <RootPropertyPathName Name="ChiTietCommand" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="TongCongNo" />
+    <RootPropertyPathName Name="NhapHang" />
+    <RootPropertyPathName Name="LogoutCommand" />
+    <RootPropertyPathName Name="PlanCommand" />
+    <RootPropertyPathName Name="CongNoCommand" />
+    <RootPropertyPathName Name="CuaHangCommand" />
+    <RootPropertyPathName Name="GiamSatCommand" />
+    <RootPropertyPathName Name="OverviewCommand" />
+    <RootPropertyPathName Name="UserName" />
+    <RootPropertyPathName Name="ThanhToan" />
+    <RootPropertyPathName Name="ThuKhac" />
+    <RootPropertyPathName Name="NgayThu" />
+    <RootPropertyPathName Name="LyDo" />
+    <RootPropertyPathName Name="SoTien" />
+    <RootPropertyPathName Name="LoaiThu" />
+    <RootPropertyPathName Name="TamUng" />
+    <RootPropertyPathName Name="NgayTamUng" />
+    <RootPropertyPathName Name="LoaiTamUng" />
+    <RootPropertyPathName Name="SoTienTamUng" />
+    <RootPropertyPathName Name="HoTen" />
+    <RootPropertyPathName Name="ChiPhi" />
+    <RootPropertyPathName Name="NgayChi" />
+    <RootPropertyPathName Name="LoaiChi" />
+    <RootPropertyPathName Name="NoiDung" />
+    <RootPropertyPathName Name="NguoiChi" />
+    <RootPropertyPathName Name="BanLeChiTietCommand" />
+    <RootPropertyPathName Name="TienMat" />
+    <RootPropertyPathName Name="CongNo" />
+    <RootPropertyPathName Name="ThuKhacCommand" />
+    <RootPropertyPathName Name="TamUngCommand" />
+    <RootPropertyPathName Name="ChiPhiCommand" />
+    <RootPropertyPathName Name="NhapHangCommand" />
+    <RootPropertyPathName Name="ThanhToanCommand" />
+    <RootPropertyPathName Name="BanLeCommand" />
+    <RootPropertyPathName Name="CleanTokenCommand" />
+    <RootPropertyPathName Name="AccessCommand" />
+    <RootPropertyPathName Name="LoginCommand" />
+    <RootPropertyPathName Name="Password" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.NativeVisibilityConverter" />
+    <RootType FullName="SSD.Mobile.WP.StringFormatConverter" />
+    <RootType FullName="SSD.Mobile.WP.MoneyFormatConverter" />
+    <RootType FullName="SSD.Mobile.WP.DateFormatConverter" />
+    <RootType FullName="SSD.Mobile.WP.DateTimeFormatConverter" />
+    <RootType FullName="SSD.Mobile.WP.VisibilityDateTypeConverter" />
+    <RootType FullName="SSD.Mobile.WP.BaseMvxWindowsPage">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="BottomAppBar" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Margin" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="IsIndeterminate" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Converter" />
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="ConverterParameter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Name" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="IsZoomedInView" />
+      <RootProperty Name="HeaderTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Child" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="HorizontalContentAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
+      <RootMethod Name="GetBehaviors" />
+      <RootMethod Name="SetBehaviors" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
+      <RootProperty Name="EventName" />
+      <RootProperty Name="Actions" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
+      <RootProperty Name="Command" />
+      <RootProperty Name="CommandParameter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="PrimaryCommands" />
+      <RootProperty Name="SecondaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="CommandParameter" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.BanLeCTView" />
+    <RootType FullName="Cirrious.MvvmCross.WindowsCommon.Views.MvxWindowsPage">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Foreground" />
+      <RootEvent Name="GotFocus" />
+      <RootEvent Name="LostFocus" />
+      <RootEvent Name="Loaded" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.FirstView" />
+    <RootType FullName="SSD.Mobile.WP.Views.LocationStoreView" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.NhapHangCTView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.BitmapIcon">
+      <RootProperty Name="UriSource" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.GiamSatView" />
+    <RootType FullName="SSD.Mobile.WP.Views.NhapHangCNView" />
+    <RootType FullName="SSD.Mobile.WP.Views.NhapHangPlanView" />
+    <RootType FullName="SSD.Mobile.WP.Views.NhapHangListView" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="ImageSource" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.MenuView" />
+    <RootType FullName="SSD.Mobile.WP.Views.ThanhToanView" />
+    <RootType FullName="SSD.Mobile.WP.Views.ThuKhacView" />
+    <RootType FullName="SSD.Mobile.WP.Views.TamUngView" />
+    <RootType FullName="SSD.Mobile.WP.Views.ChiPhiView" />
+    <RootType FullName="SSD.Mobile.WP.Views.BanLeListView" />
+    <RootType FullName="SSD.Mobile.WP.Views.OverviewView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Password" />
+      <RootProperty Name="PasswordChar" />
+      <RootEvent Name="GotFocus" />
+      <RootEvent Name="LostFocus" />
+    </RootType>
+    <RootType FullName="SSD.Mobile.WP.Views.LoginView" />
+  </Roots.RootTypes>
+</Roots>

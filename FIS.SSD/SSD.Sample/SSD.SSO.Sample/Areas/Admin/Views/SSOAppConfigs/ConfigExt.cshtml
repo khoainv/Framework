@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SSD.Web.Models.AppConfig>
+
+@{
+    ViewBag.Title = "Cấu hình Ext";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<table style="width:100%">
+    <tr>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", (string)ViewBag.EditAction, null, htmlAttributes: new { @class = "btn btn-default" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfigKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsEncryption)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfigKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsEncryption)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", (string)ViewBag.EditAction, new { id = item.ID })|
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID, actionName = "ConfigExt", typeName = ViewBag.TypeName })
+        </td>
+    </tr>
+}
+</table>

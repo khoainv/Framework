@@ -1,0 +1,64 @@
+﻿@model SSD.Web.Mvc.Models.ListPermissionViewModel
+
+@{
+    ViewBag.Title = "List Permissions";
+}
+
+<h4>@ViewBag.Title</h4>
+
+@using (Html.BeginForm("UpdatePermission", "SSOPermission"))
+{
+<p>
+    <input type="submit" class="btn btn-default" value="Update" />
+</p>
+}
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PermissionList.FirstOrDefault().ControllerKey)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionList.FirstOrDefault().AcctionKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionList.FirstOrDefault().Description)
+        </th>
+        <th></th>
+    </tr>
+@if (Model.PermissionList != null)
+{
+    foreach (var group in Model.PermissionList.GroupBy(x => x.ControllerKey))
+    {
+        <tr class="group-header">
+            <td colspan="3">
+                <span class="h4">@group.Key.Replace("Controller", "")</span>
+            </td>
+        </tr>
+        foreach (var item in group)
+        {
+            <tr class="odd">
+                <td>
+                    @Html.DisplayFor(modelItem => item.AcctionKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    }
+}
+</table>
+@section scripts {
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('.group-header').click(function () {
+                    $(this).nextUntil('.group-header').toggle();
+                });
+            });
+        })(jQuery);
+</script>
+}

@@ -1,0 +1,217 @@
+/*
+ * oSlide - jQuery Plugin
+ * A slideshow designet for the frontside of my protfolio
+ *
+ * Copyright (c) 2011 Andrés Bott
+ * Examples and documentation at: http://andresbott.com or http://oslide.andresbott.com
+ * 
+ * Version: 0.9.2(5/May/2011)
+ * Developed with: jQuery v1.4
+ * 
+ * licensed under the LGPL license:
+ *   http://www.gnu.org/licenses/lgpl.html
+ * oSlide
+ *This plugin is developed with a object oriented paradigm, so it has some public methods witch you can call to interact with the plugin
+ *
+ *
+ */
+
+/* Style of the container, this is the div in witch oSlide makes it's magic  */
+.oSlide{
+  border:1px solid gray;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-bottom:45px;
+  width:760px; height:350px;
+}
+
+/* I didn't use it  */
+#oSlideImageDiv{}
+
+/*  avoid some conflicts */
+.oSlide a img{
+	border: none !important;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+/* ############################################################################################################################3 */
+/* ##   Some specific rules */
+/* ############################################################################################################################3 */
+/* Fading background color */
+.oSlideFadeColorBackround{
+background:white;
+
+}
+
+
+
+/* ############################################################################################################################3 */
+/* ##    the loading clip */
+/* ############################################################################################################################3 */
+#oSlide-loading {
+	position: absolute;
+	top: 47%;
+	left: 47%;
+	width: 40px;
+	height: 40px;
+
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+
+}
+
+#oSlide-loading-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('oSlide.png');
+}
+
+/* ############################################################################################################################3 */
+/* ##    Caption */
+/* ############################################################################################################################3 */
+#oSlideCaption {
+	/* to put it to the bottom */
+	bottom:0px; 
+
+	/* to put it to the top */
+/* 	top:0px;  */
+
+	position:absolute !important;
+	width:100% !important;
+
+	display:block;
+	font-weight:bold;
+	font-size:12px;
+
+
+	text-decoration:none;
+	padding: 2px 1px 1px 20px;
+/* 	text-align:center; */
+      color:white;
+	background: rgba(0, 0, 0, 0.6);
+
+       #background:transparent;
+       #filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+       #zoom: 1;
+
+
+
+}
+ #oSlideCaption a{
+color:white;
+text-decoration:none;
+}
+
+
+
+
+
+/* ############################################################################################################################3 */
+/* ##    Navigation Bar */
+/* ############################################################################################################################3 */
+
+
+#oSlideNavigation{
+	display:none;
+	position:absolute;
+	width:100%;
+	z-index: 1105;
+	text-align:center;
+	height:14px;
+	bottom:	-20px;
+}
+
+.oSlideNavigationElement{
+	width:12px;
+	height:12px;
+
+
+	display:inline-block;
+       zoom: 1; /* IE7 (hasLayout)*/
+       *display: inline; /* IE */
+
+	margin:5px;
+	cursor:pointer;
+
+	background-repeat:none;
+	background-image: url('oSlide.png');
+	background-position: 36px -304px;
+}
+
+.oSlideNavigationElement:hover{
+	background-image: url('oSlide.png');
+	background-position: 36px -284px;
+
+}
+
+
+.oSlideNavigationElement span{
+	display:none;
+}
+
+
+.oSlideNavigationActiveElement {
+/* 	background-image : url('oSlide_active.png'); */
+	background-image: url('oSlide.png');
+	background-position: 36px -284px;
+
+	cursor:default;
+/* width:40px; */
+}
+/* ############################################################################################################################3 */
+/* ##    Navigation  controls */
+/* ############################################################################################################################3 */
+
+.oSlideNavigationControl{
+	position:absolute !important;
+	display:none;
+	width:40px;
+	cursor:pointer;
+
+}
+
+#oSlideNextNavigation {
+	right:0px;
+}
+
+#oSlideNextNavigation div{
+	position:absolute;
+	top:40%;
+	width:40px;
+	height:60px;
+	right:0px;
+	background-image: url('oSlide.png');
+	background-position: 40px -180px;
+}
+#oSlideNextNavigation div:hover{
+  	background-position: 40px -58px;
+}
+
+
+
+#oSlidePrewNavigation {
+
+left:0px;
+
+}
+
+#oSlidePrewNavigation  div {
+
+	position:absolute;
+	top:40%;
+	width:40px;
+	height:60px;
+	right:0px;
+	background-image: url('oSlide.png');
+	background-position: 40px -120px;
+
+
+}
+
+#oSlidePrewNavigation  div:hover {
+    	background-position: 40px 2px;
+}

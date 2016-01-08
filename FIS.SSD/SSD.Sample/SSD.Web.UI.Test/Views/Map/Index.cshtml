@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Maps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Maps</h2>
+<div id="bando" >
+@using SSD.Web.UI.Maps
+@using SSD.Web.UI.Html
+@Html.Map(Ajax.BingMap().CssClass("GoogleMap")
+                .AddPushpin(new Pushpin(20.982184, 105.818864, "UG Center", "UG Corporation")).Zoom(10).Center(20.982184, 105.818864))
+
+@Html.Map(Ajax.GoogleMap().CssClass("GoogleMap")
+                        .AddPushpin(new Pushpin(20.982184, 105.818864, "UG Center", "UG Corporation")).Zoom(6).Center(20.982184, 105.818864)
+                .AddPolygon(new Polygon(new List<LatLng>(){
+	                new LatLng(21, 103),
+                    new LatLng(23, 105),
+	                new LatLng(21, 107),
+                    new LatLng(19, 105),
+                    new LatLng(20, 103)
+	            })
+                {
+                    FillColor = "#11FF11", // Color Green
+                    FillOpacity = 0.8, // 50% Opacity
+                    LineColor = "#FF0000", // Color Red
+                    LineOpacity = 0.8,  // 80% Opacity
+                    LineWeight = 4 // Line Weight (Width) of 4px
+                }))
+
+</div>

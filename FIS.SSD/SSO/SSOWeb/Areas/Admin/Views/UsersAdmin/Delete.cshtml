@@ -1,0 +1,29 @@
+﻿@model SSD.SSO.Identity.ApplicationUser
+
+@{
+    ViewBag.Title = "Delete For User.";
+}
+<h4>@ViewBag.Title</h4>
+
+<h4>Are you sure you want to delete this User?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

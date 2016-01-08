@@ -1,0 +1,10 @@
+D:\FIS\Framework\FIS.SSD\Framework\SSD.Framework.Portable\SSD.Framework.Portable.csproj;neutral
+D:\FIS\Framework\FIS.SSD\Framework\SSD.Framework.Portable\SSD.Framework.Portable.csproj;neutral
+D:\FIS\Framework\FIS.SSD\Framework\SSD.Framework.Portable\SSD.Framework.Portable.csproj;neutral
+D:\FIS\Framework\FIS.SSD\Framework\SSD.Framework.Portable\SSD.Framework.Portable.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.Agents\SSD.Mobile.Agents.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.Common\SSD.Mobile.Common.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.Common\SSD.Mobile.Common.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.Common\SSD.Mobile.Common.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.Share\SSD.Mobile.Share.csproj;neutral
+D:\FIS\Framework\FIS.SSD\SSD.Sample.Mobi\SSD.Mobile.WP\SSD.Mobile.WP.csproj;neutral

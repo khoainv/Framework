@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SSD.SSO.Identity.ApplicationUser>
+
+@{
+    ViewBag.Title = "Danh sách người dùng";
+}
+
+<h4>@ViewBag.Title</h4>
+<table style="width:100%">
+    <tr>
+        <td style="width:600px">
+            @using (Html.BeginForm("Index", "UsersAdmin", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Name">Tìm kiếm:</label>
+                        <div class="col-md-6">
+                            @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { @class = "form-control", @style = "max-width: 400px;" })
+                        </div>
+                        <label class="control-label col-md-2">System @Html.CheckBox("isSystem", ViewBag.CurrentFilter as bool?)</label>
+                        <div class="col-md-2">
+                            <input type="submit" value="Tìm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </td>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-default" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("User Name", "Index", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey, isSystem = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CompaniesView)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoresView)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.IsSystemAccount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.CompaniesView)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoresView)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSystemAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="7">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>

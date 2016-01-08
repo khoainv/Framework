@@ -1,0 +1,22 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="d:\fis\framework\fis.ssd\ug.sample.mobi\ug.mobile.wp\obj\debug\intermediatexaml\ssd.mobile.wp.exe" HashGuid="74f65994-f0d9-0a6c-f9a9-9abe442bf237" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.crosscore.3.5.1\lib\wpa81\cirrious.crosscore.dll" HashGuid="f51cf076-e9f9-7893-b7aa-10ded5a79469" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.crosscore.3.5.1\lib\wpa81\cirrious.crosscore.windowscommon.dll" HashGuid="33137c4e-381b-0828-9fcf-2ac3014e11f4" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.5.1\lib\wpa81\cirrious.mvvmcross.dll" HashGuid="c59ba883-98f9-a0fc-9b87-39694ebb8fc3" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.crosscore.3.5.1\lib\wpa81\cirrious.mvvmcross.localization.dll" HashGuid="cc169ebc-6f40-271e-a9fe-e2fe4b3425db" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.plugin.visibility.3.5.1\lib\wpa81\cirrious.mvvmcross.plugins.visibility.dll" HashGuid="0cca796d-aaf7-e28b-8903-218a83ed9788" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.plugin.visibility.3.5.1\lib\wpa81\cirrious.mvvmcross.plugins.visibility.windowscommon.dll" HashGuid="37d4512c-1c42-3976-b2c6-58c74ad8f07e" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\mvvmcross.hottuna.mvvmcrosslibraries.3.5.1\lib\wpa81\cirrious.mvvmcross.windowscommon.dll" HashGuid="9470c5fd-ff0e-73c7-d67b-3c13969244eb" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\newtonsoft.json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\newtonsoft.json.dll" HashGuid="86223907-5808-be51-71b4-c872f8140e29" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\pclcrypto.1.0.86\lib\wpa81\pclcrypto.dll" HashGuid="4950550c-470c-baad-713b-7ae278de2dda" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\xam.plugins.settings.2.1.0\lib\wpa81\plugin.settings.abstractions.dll" HashGuid="2b0e2d63-0984-03e6-e1dc-77d16c51778c" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\xam.plugins.settings.2.1.0\lib\wpa81\plugin.settings.dll" HashGuid="a18bed2b-0275-cca7-9572-a50ae2a97cfe" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\framework\ssd.framework.portable\bin\debug\ssd.framework.dll" HashGuid="d3ef7576-3fc9-f17a-6a78-71e892097384" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\ssd.sample.mobi\ssd.mobile.common\bin\debug\ssd.mobile.common.dll" HashGuid="9d1023d2-c802-f4ba-7137-284e29fb43d9" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\ssd.sample.mobi\ssd.mobile.share\bin\debug\ssd.mobile.share.dll" HashGuid="0ebdd773-2256-f980-4911-4a1adc336fc1" />
+    <ReferenceAssembly PathName="d:\fis\framework\fis.ssd\packages\validation.2.2.8\lib\dotnet\validation.dll" HashGuid="f7eff8c2-9a3d-f4fc-6fe4-78f849043e26" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

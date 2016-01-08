@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KHOAINV</Machine>
+    <WindowsUser>khoai_000</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>1f977882-6ed3-47de-8d61-e512f76d9e1e</PackageIdentityName>
+    <IntermediateOutputPath>D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Sync7i.Mobile.WP.exe">
+      <PackagePath>Sync7i.Mobile.WP.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wpa81\Cirrious.CrossCore.dll">
+      <PackagePath>Cirrious.CrossCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wpa81\Cirrious.CrossCore.WindowsCommon.dll">
+      <PackagePath>Cirrious.CrossCore.WindowsCommon.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\wpa81\Cirrious.MvvmCross.dll">
+      <PackagePath>Cirrious.MvvmCross.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\wpa81\Cirrious.MvvmCross.Localization.dll">
+      <PackagePath>Cirrious.MvvmCross.Localization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.1\lib\wpa81\Cirrious.MvvmCross.Plugins.Visibility.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Visibility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.Plugin.Visibility.3.5.1\lib\wpa81\Cirrious.MvvmCross.Plugins.Visibility.WindowsCommon.dll">
+      <PackagePath>Cirrious.MvvmCross.Plugins.Visibility.WindowsCommon.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\wpa81\Cirrious.MvvmCross.WindowsCommon.dll">
+      <PackagePath>Cirrious.MvvmCross.WindowsCommon.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\PCLCrypto.1.0.2.15130\lib\wpa81\PCLCrypto.dll">
+      <PackagePath>PCLCrypto.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\Xam.Plugins.Settings.1.5.1\lib\wpa81\Refractored.Xam.Settings.Abstractions.dll">
+      <PackagePath>Refractored.Xam.Settings.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\Xam.Plugins.Settings.1.5.1\lib\wpa81\Refractored.Xam.Settings.dll">
+      <PackagePath>Refractored.Xam.Settings.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.BusinessEntities\bin\Debug\Sync7i.Mobile.BusinessEntities.dll">
+      <PackagePath>Sync7i.Mobile.BusinessEntities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.BusinessLogics\bin\Debug\Sync7i.Mobile.BusinessLogics.dll">
+      <PackagePath>Sync7i.Mobile.BusinessLogics.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Sync7i.Mobile.Common.dll">
+      <PackagePath>Sync7i.Mobile.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Share\bin\Debug\Sync7i.Mobile.Share.dll">
+      <PackagePath>Sync7i.Mobile.Share.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\UG.Mobile.Framework\bin\Debug\UG.Mobile.Framework.dll">
+      <PackagePath>UG.Mobile.Framework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\packages\Validation.2.0.6.15003\lib\portable-net40+sl50+win+wpa81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\Validation.dll">
+      <PackagePath>Validation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.BusinessLogics\bin\Debug\Sync7i.Mobile.Agents.dll">
+      <PackagePath>Sync7i.Mobile.Agents.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Share\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.BusinessLogics\bin\Debug\Zlib.Portable.dll">
+      <PackagePath>Zlib.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\appbar.back.rest.png">
+      <PackagePath>Assets\appbar.back.rest.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\appbar.next.rest.png">
+      <PackagePath>Assets\appbar.next.rest.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\ApplicationIcon.png">
+      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\BadgeLogo.scale-140.png">
+      <PackagePath>Assets\BadgeLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\BadgeLogo.scale-240.png">
+      <PackagePath>Assets\BadgeLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_supervisor.png">
+      <PackagePath>Assets\icon_supervisor.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_avatar_unavailable.png">
+      <PackagePath>Assets\icon_avatar_unavailable.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_daily.png">
+      <PackagePath>Assets\icon_daily.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_mask_lock.png">
+      <PackagePath>Assets\icon_mask_lock.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_mask_user.png">
+      <PackagePath>Assets\icon_mask_user.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_menu.png">
+      <PackagePath>Assets\icon_menu.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_monthly.png">
+      <PackagePath>Assets\icon_monthly.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_refresh.png">
+      <PackagePath>Assets\icon_refresh.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_weekly.png">
+      <PackagePath>Assets\icon_weekly.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\icon_home.png">
+      <PackagePath>Assets\icon_home.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Square71x71Logo.scale-140.png">
+      <PackagePath>Assets\Square71x71Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\Properties\_SettingsStarted.txt">
+      <PackagePath>Properties\_SettingsStarted.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\SamplePara_RestClient.txt">
+      <PackagePath>SamplePara_RestClient.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\ToDo-MvvmCross\_ Windows Store UI.txt">
+      <PackagePath>ToDo-MvvmCross\_ Windows Store UI.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Share\ToDo-MvvmCross\_ Core.txt">
+      <PackagePath>Sync7i.Mobile.Share\ToDo-MvvmCross\_ Core.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Sync7i.Mobile.WP.xr.xml">
+      <PackagePath>Sync7i.Mobile.WP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\BanLeCTView.xbf">
+      <PackagePath>Views\BanLeCTView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\LocationStoreView.xbf">
+      <PackagePath>Views\LocationStoreView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\NhapHangCTView.xbf">
+      <PackagePath>Views\NhapHangCTView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\GiamSatView.xbf">
+      <PackagePath>Views\GiamSatView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\NhapHangCNView.xbf">
+      <PackagePath>Views\NhapHangCNView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\NhapHangPlanView.xbf">
+      <PackagePath>Views\NhapHangPlanView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\NhapHangListView.xbf">
+      <PackagePath>Views\NhapHangListView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\MenuView.xbf">
+      <PackagePath>Views\MenuView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\ThanhToanView.xbf">
+      <PackagePath>Views\ThanhToanView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\ThuKhacView.xbf">
+      <PackagePath>Views\ThuKhacView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\TamUngView.xbf">
+      <PackagePath>Views\TamUngView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\ChiPhiView.xbf">
+      <PackagePath>Views\ChiPhiView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\BanLeListView.xbf">
+      <PackagePath>Views\BanLeListView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\OverviewView.xbf">
+      <PackagePath>Views\OverviewView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\Views\LoginView.xbf">
+      <PackagePath>Views\LoginView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.DataAccess\bin\Debug\Sync7i.Mobile.DataAccess.dll">
+      <PackagePath>Sync7i.Mobile.DataAccess.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.WP\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

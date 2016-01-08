@@ -1,0 +1,182 @@
+﻿@model IEnumerable<IdentityServer3.EntityFramework.Entities.Client>
+
+@{
+    ViewBag.Title = "Clients Manager";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<table style="width:100%">
+    <tr>
+        <td style="text-align:left; width:50%">
+            <p>
+                @Html.ActionLink("(Mobile) Create New with Flow is ResourceOwner, Custom, ClientCredentials", "CreateResourceOwner", null, htmlAttributes: new { @class = "" })  @*btn btn-default*@
+            </p>
+        </td>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("(Web) Create New with Flow is Implicit, Hybrid, AuthorizationCode", "Create", null, htmlAttributes: new { @class = "" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Enabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientUri)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.LogoUri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequireConsent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowRememberConsent)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Flow)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.AllowClientCredentialsOnly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowAccessToAllScopes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdentityTokenLifetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessTokenLifetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthorizationCodeLifetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbsoluteRefreshTokenLifetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SlidingRefreshTokenLifetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefreshTokenUsage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateAccessTokenOnRefresh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefreshTokenExpiration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessTokenType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnableLocalLogin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncludeJwtId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlwaysSendClientClaims)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrefixClientClaims)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AllowAccessToAllGrantTypes)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Enabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientUri)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.LogoUri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequireConsent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowRememberConsent)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Flow)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.AllowClientCredentialsOnly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowAccessToAllScopes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdentityTokenLifetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessTokenLifetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorizationCodeLifetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbsoluteRefreshTokenLifetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SlidingRefreshTokenLifetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefreshTokenUsage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateAccessTokenOnRefresh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefreshTokenExpiration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessTokenType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnableLocalLogin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IncludeJwtId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlwaysSendClientClaims)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrefixClientClaims)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllowAccessToAllGrantTypes)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

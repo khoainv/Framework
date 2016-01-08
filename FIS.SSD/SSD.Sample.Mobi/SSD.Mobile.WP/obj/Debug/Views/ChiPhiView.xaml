@@ -1,0 +1,128 @@
+﻿<Base:BaseMvxWindowsPage
+    xmlns:Base="using:SSD.Mobile.WP"
+    x:Class="SSD.Mobile.WP.Views.ChiPhiView"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SSD.Mobile.WP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#e9eaed" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#3b73af"/>
+        <!--TitlePanel contains the name of the application and page title-->
+        <Grid x:Name="NavTopAppBar" Background="#000" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Source="/Assets/appbar.back.rest.png" >
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding DataContext.BackTimeCommand, ElementName=NavTopAppBar}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Image>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#fff" FontSize="24" TextWrapping="NoWrap" Text="{Binding NavTitle}" />
+            <Image Grid.Column="2" HorizontalAlignment="Right" Source="/Assets/appbar.next.rest.png" >
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding DataContext.NextTimeCommand, ElementName=NavTopAppBar}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Image>
+        </Grid>
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1"  Background="#e9eaed">
+            <ListView Name="ListViewChiPhi">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#bfbfbf" BorderThickness="2" Margin="5,5,5,0" CornerRadius="4,4,4,4">
+                            <Grid Background="#fff" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Foreground="#3b73af" FontSize="30" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Chi phí"/>
+                                <TextBlock Grid.Column="1" Foreground="#3b73af" FontSize="30" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Path=OverviewModel.ChiPhi,Converter={StaticResource MoneyFormat}}"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#bfbfbf" BorderThickness="2" Margin="5,5,5,0"  CornerRadius="4,4,4,4">
+                            <Grid Background="#fff" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Margin="5,5,0,0" Foreground="#3b73af" FontSize="24" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding NguoiChi}" />
+                                <TextBlock Grid.Column="1" Margin="0,5,5,0" Foreground="#3b73af" FontSize="24" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding SoTien,Converter={StaticResource MoneyFormat}}" />
+                                <TextBlock Grid.ColumnSpan="2" Grid.Row="1" Margin="5,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NoiDung}" />
+                                <TextBlock Grid.Row="2" Margin="5,5,0,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding LoaiChi}" />
+                                <TextBlock Grid.Row="2" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding NgayChi,Converter={StaticResource DateFormat}}" />
+                                <Border BorderBrush="#9a9a9a" Opacity="0.5" BorderThickness="0,1,0,0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <ProgressBar Width="480" Height="10" IsIndeterminate="True" Visibility="{Binding IsBusy, Converter={StaticResource VisibilityConverter}}" />
+        </Grid>
+    </Grid>
+    <views:MvxWindowsPage.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Background>
+                <SolidColorBrush Color="#3b73af"></SolidColorBrush>
+            </CommandBar.Background>
+            <AppBarButton Label="Ngày" Command="{Binding FilterCommand}" CommandParameter="{Binding Daily}" Margin="0" Visibility="{Binding Daily, Converter={StaticResource VisibilityDateTypeConverter}}">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/icon_daily.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Label="Tuần" Command="{Binding FilterCommand}" CommandParameter="{Binding Weekly}"  Visibility="{Binding Weekly, Converter={StaticResource VisibilityDateTypeConverter}}">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/icon_weekly.png" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Label="Tháng" Command="{Binding FilterCommand}" CommandParameter="{Binding Monthly}"  Visibility="{Binding Monthly, Converter={StaticResource VisibilityDateTypeConverter}}">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/icon_monthly.png" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton Label="Home" Icon="Home" Command="{Binding FilterCommand}" CommandParameter="{Binding Home}"  Visibility="{Binding Home, Converter={StaticResource VisibilityDateTypeConverter}}">
+            </AppBarButton>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Tùy chọn" Icon="Refresh" Command="{Binding FilterCommand}" CommandParameter="{Binding Option}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </views:MvxWindowsPage.BottomAppBar>
+</Base:BaseMvxWindowsPage>
+

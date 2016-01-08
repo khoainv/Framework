@@ -1,0 +1,58 @@
+﻿@model SSD.SSO.Identity.ApplicationPermission
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplicationPermission</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ControllerKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ControllerKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AcctionKey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcctionKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+
+<h4>List of Roles added to Permission</h4>
+@if (ViewBag.PermissionsCount == 0)
+{
+    <hr />
+    <p>No users found in this role.</p>
+}
+
+<table class="table">
+
+    @foreach (var item in ViewBag.RolesList)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

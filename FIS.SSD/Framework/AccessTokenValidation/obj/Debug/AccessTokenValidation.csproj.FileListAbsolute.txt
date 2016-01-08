@@ -1,0 +1,14 @@
+D:\UG2014\UGFramework\Src\build\IdentityServer3.AccessTokenValidation.dll.config
+D:\UG2014\UGFramework\Src\build\IdentityServer3.AccessTokenValidation.xml
+D:\UG2014\UGFramework\Src\build\IdentityServer3.AccessTokenValidation.dll
+D:\UG2014\UGFramework\Src\build\IdentityServer3.AccessTokenValidation.pdb
+D:\UG2014\UGFramework\Src\Framework\AccessTokenValidation\obj\Debug\AccessTokenValidation.csprojResolveAssemblyReference.cache
+D:\UG2014\UGFramework\Src\Framework\AccessTokenValidation\obj\Debug\IdentityServer3.AccessTokenValidation.dll
+D:\UG2014\UGFramework\Src\Framework\AccessTokenValidation\obj\Debug\IdentityServer3.AccessTokenValidation.pdb
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.AccessTokenValidation.dll.config
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.AccessTokenValidation.xml
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.AccessTokenValidation.dll
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.AccessTokenValidation.pdb
+D:\FIS\Framework\FIS.SSD\Framework\AccessTokenValidation\obj\Debug\AccessTokenValidation.csprojResolveAssemblyReference.cache
+D:\FIS\Framework\FIS.SSD\Framework\AccessTokenValidation\obj\Debug\IdentityServer3.AccessTokenValidation.dll
+D:\FIS\Framework\FIS.SSD\Framework\AccessTokenValidation\obj\Debug\IdentityServer3.AccessTokenValidation.pdb

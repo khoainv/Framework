@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39869D55-844B-4BBE-A34C-22E5E305FD0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSD.Web.UI</RootNamespace>
+    <AssemblyName>SSD.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Captcha\CaptchaHelper.cs" />
+    <Compile Include="Captcha\CaptchaImageController.cs" />
+    <Compile Include="Captcha\CaptchaModels.cs" />
+    <Compile Include="Captcha\Encryption.cs" />
+    <Compile Include="Captcha\GenerateImage.cs" />
+    <Compile Include="Captcha\IGenerateImage.cs" />
+    <Compile Include="Captcha\RandomNumber.cs" />
+    <Compile Include="Captcha\RandomText.cs" />
+    <Compile Include="Editor\BBEditorProvider.cs" />
+    <Compile Include="Editor\CKEditorProvider.cs" />
+    <Compile Include="Editor\CodeEditorProvider.cs" />
+    <Compile Include="Editor\EditorProvider.cs" />
+    <Compile Include="Editor\EditorService.cs" />
+    <Compile Include="Editor\EditorServiceSection.cs" />
+    <Compile Include="Editor\FckEditorProvider.cs" />
+    <Compile Include="Editor\JHtmlAreaEditorProvider.cs" />
+    <Compile Include="Editor\TinyMCEEditorProvider.cs" />
+    <Compile Include="FileManager\ElFinder.cs" />
+    <Compile Include="FileManager\ElFinderILogger.cs" />
+    <Compile Include="FileManager\ElFinderLogger.cs" />
+    <Compile Include="FileManager\FileManagerController.cs" />
+    <Compile Include="Html\CaptchaExtension.cs" />
+    <Compile Include="Html\EditorExtension.cs" />
+    <Compile Include="Html\FileManagerExtension.cs" />
+    <Compile Include="Html\IMStatusExtension.cs" />
+    <Compile Include="Html\MapExtension.cs" />
+    <Compile Include="Html\RatingExtension.cs" />
+    <Compile Include="Html\RibbonExtension.cs" />
+    <Compile Include="Html\SlideShowExtension.cs" />
+    <Compile Include="Html\TagsExtensions.cs" />
+    <Compile Include="Html\WebMasterExtension.cs" />
+    <Compile Include="Maps\BingMap.cs" />
+    <Compile Include="Maps\BingMapExtensions.cs" />
+    <Compile Include="Maps\BingMapMode.cs" />
+    <Compile Include="Maps\BingMapSL.cs" />
+    <Compile Include="Maps\BingMapSLExtensions.cs" />
+    <Compile Include="Maps\BingOrientation.cs" />
+    <Compile Include="Maps\BingPolygon.cs" />
+    <Compile Include="Maps\BingPolyline.cs" />
+    <Compile Include="Maps\DefaultMapExtensions.cs" />
+    <Compile Include="Maps\DynamicMapOptions.cs" />
+    <Compile Include="Maps\Extensions\JsonValueAttribute.cs" />
+    <Compile Include="Maps\Extensions\JsonValueAttributeExtensions.cs" />
+    <Compile Include="Maps\GoogleMap.cs" />
+    <Compile Include="Maps\GoogleMapExtensions.cs" />
+    <Compile Include="Maps\GooglePushpin.cs" />
+    <Compile Include="Maps\GooglePushpinShowEvents.cs" />
+    <Compile Include="Maps\IBingPoly.cs" />
+    <Compile Include="Maps\IJsonRender.cs" />
+    <Compile Include="Maps\IMap.cs" />
+    <Compile Include="Maps\LatLng.cs" />
+    <Compile Include="Maps\Map.cs" />
+    <Compile Include="Maps\MapDataResult.cs" />
+    <Compile Include="Maps\MapType.cs" />
+    <Compile Include="Maps\Polygon.cs" />
+    <Compile Include="Maps\Polyline.cs" />
+    <Compile Include="Maps\Pushpin.cs" />
+    <Compile Include="Maps\Utils\GuidUtils.cs" />
+    <Compile Include="Maps\Utils\JsonArrayBuilder.cs" />
+    <Compile Include="Maps\Utils\JsonObjectBuilder.cs" />
+    <Compile Include="Maps\Utils\WebUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ribbon\MenuItem.cs" />
+    <Compile Include="Ribbon\MenuRibbon.cs" />
+    <Compile Include="Ribbon\RibbonItem.cs" />
+    <Compile Include="Ribbon\RibbonService.cs" />
+    <Compile Include="Ribbon\RibbonStateController.cs" />
+    <Compile Include="Tags\Tag.cs" />
+    <Compile Include="Tags\TagCloud.cs" />
+    <Compile Include="Tags\TagCloudGenerationRules.cs" />
+    <Compile Include="Tags\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maps\BingMap.js" />
+    <Content Include="Maps\BingMapSL.js" />
+    <Content Include="Maps\GoogleMap.js" />
+    <Content Include="Maps\Map.js" />
+    <Content Include="Tags\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSD.Framework\SSD.Framework.csproj">
+      <Project>{1fb77161-21bd-4ad7-b74e-904b52a00be1}</Project>
+      <Name>SSD.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSD.Web.Mvc\SSD.Web.Mvc.csproj">
+      <Project>{3f58b3c2-6d07-478d-b247-eb1dda683725}</Project>
+      <Name>SSD.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSD.Web\SSD.Web.csproj">
+      <Project>{914b8b01-a84e-495a-aa98-ef60fae009f7}</Project>
+      <Name>SSD.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

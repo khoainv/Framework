@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-controller="LayoutCtrl">
+<head>
+    <meta charset="utf-8" />
+    <title>{siteName}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link href="/Content/libs/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body lang="en">
+    <div class="wrapper">
+        <div class="form-signin">
+            <h2 class="form-signin-heading"><img src="/Content/libs/images/fis_logo.png" /></h2>
+            <div class="page-header">
+                {{model.clientName}} <small>is requesting your permission</small>
+            </div>
+            <div ng-show="model.errorMessage" class="alert alert-danger">
+                <strong>Error:</strong>
+                {{model.errorMessage}}
+            </div>
+            <form name="form" method="post" action="{{model.consentUrl}}" class="consent-form">
+                <anti-forgery-token token="model.antiForgery"></anti-forgery-token>
+                <div>Uncheck the permissions you do not wish to grant.</div>
+                <div class="panel panel-default consent-buttons" ng-show="model.identityScopes">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Personal Information
+                    </div>
+                    <ul class="list-group">
+                        <li ng-repeat="scope in model.identityScopes" class="list-group-item">
+                            <label>
+                                <input class="consent-scopecheck" type="checkbox" name="scopes" id="scopes_{{scope.name}}" value="{{scope.name}}" ng-model="scope.selected" ng-disabled="scope.required" />
+                                <strong>{{scope.displayName}}</strong>
+                                <span ng-show="scope.emphasize" class="glyphicon glyphicon-exclamation-sign"></span>
+                            </label>
+                            <span ng-show="scope.required"><em>(required)</em></span>
+                            <div class="consent-description" ng-show="scope.description">
+                                <label for="scopes_{{scope.name}}">{{scope.description}}</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-default" ng-show="model.resourceScopes">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-tasks"></span>
+                        Application Access
+                    </div>
+                    <ul class="list-group">
+                        <li ng-repeat="scope in model.resourceScopes" class="list-group-item">
+                            <label>
+                                <input class="consent-scopecheck" type="checkbox" name="scopes" value="{{scope.name}}" ng-model="scope.selected" ng-disabled="scope.required" />
+                                <strong>{{scope.displayName}}</strong>
+                                <span ng-show="scope.emphasize" class="glyphicon glyphicon-exclamation-sign"></span>
+                            </label>
+                            <span ng-show="scope.required"><em>(required)</em></span>
+                            <div class="consent-description" ng-show="scope.description">
+                                <span ng-show="scope.required"><em>(required)</em></span>
+                                <label for="scopes_{{scope.name}}">{{scope.description}}</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="consent-remember" ng-show="model.allowRememberConsent">
+                    <label>
+                        <input class="consent-scopecheck" type="checkbox" name="RememberConsent" value="true" ng-model="model.rememberConsent" />
+                        <strong>Remember My Decision</strong>
+                    </label>
+                </div>
+                <div class="consent-buttons">
+                    <button name="button" value="yes" class="btn btn-primary" autofocus>Yes, Allow</button>
+                    <button name="button" value="no" class="btn">No, Do Not Allow</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <p style="text-align:center">UG - Single sign-on System.</p>
+    </div>
+    <script id='modelJson' type='application/json'>
+        {model}
+    </script>
+    <script src="/content/libs/jquery/jquery-1.11.0.min.js"></script>
+    <script src="/content/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/content/libs/angular/angular.1.2.13.min.js"></script>
+    <script src="/content/libs/encoder/encoder.min.js"></script>
+    <script src="/content/app/app.js"></script>
+</body>
+</html>
+
+

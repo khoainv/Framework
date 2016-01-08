@@ -1,0 +1,86 @@
+﻿@using SSD.Framework.Email
+@model SSD.Web.Models.AppConfig
+
+@{
+    ViewBag.Title = "Edit SMTP Mail Config";
+    SmtpData smpt = new SmtpData();
+    if (Model != null && !string.IsNullOrWhiteSpace(Model.ConfigData))
+    {
+        smpt = SmtpData.GetObject(Model.ConfigData);
+    }
+}
+
+<h4>@ViewBag.Title</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfigKey, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConfigKey, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfigKey, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Host", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Host", smpt.Host, new { @class = "form-control" })
+                @Html.ValidationMessage("Host", "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.Label("Port", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Port", smpt.Port, new { @class = "form-control", style = "max-width:50px" })
+                @Html.ValidationMessage("Port", "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("UserName", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("UserName", smpt.UserName, new { @class = "form-control" })
+                @Html.ValidationMessage("UserName", "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Password", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Password("Password", smpt.Password, new { @class = "form-control" })
+                @Html.ValidationMessage("Password", "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsEncryption, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsEncryption)
+                    @Html.ValidationMessageFor(model => model.IsEncryption, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ConfigExt", new { typeName = typeof(SmtpData).FullName }, null)
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<UG.SSO.Config.AppConfig>
+
+@{
+    ViewBag.Title = "Danh sách cấu hình";
+}
+
+<h4>@ViewBag.Title</h4>
+<table style="width:100%">
+    <tr>
+        <td style="width:600px">
+            @using (Html.BeginForm("Index", "AppConfigs", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Name">Tìm kiếm:</label>
+                        <div class="col-md-8">
+                            @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { @class = "form-control", @style = "max-width: 400px;" })
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Tìm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </td>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-default" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Key", "Index", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfigData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsEncryption)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfigKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfigData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsEncryption)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+    <tr>
+        <td colspan="5">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>

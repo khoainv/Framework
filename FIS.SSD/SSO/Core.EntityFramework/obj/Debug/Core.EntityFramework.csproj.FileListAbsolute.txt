@@ -1,0 +1,17 @@
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\build\IdentityServer3.EntityFramework.dll.config
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\build\IdentityServer3.EntityFramework.dll
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\build\IdentityServer3.EntityFramework.pdb
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\Source\Core.EntityFramework\obj\Debug\Core.EntityFramework.csprojResolveAssemblyReference.cache
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\Source\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.dll
+F:\OneDrive\V-EBooks\IT\Architect\2.Research\SSO\IdentityServer3.EntityFramework-master\Source\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.pdb
+D:\UG2014\7iOnline\build\IdentityServer3.EntityFramework.dll.config
+D:\UG2014\7iOnline\build\IdentityServer3.EntityFramework.dll
+D:\UG2014\7iOnline\build\IdentityServer3.EntityFramework.pdb
+D:\UG2014\7iOnline\SSO\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.dll
+D:\UG2014\7iOnline\SSO\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.pdb
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.EntityFramework.dll.config
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.EntityFramework.dll
+D:\FIS\Framework\FIS.SSD\build\IdentityServer3.EntityFramework.pdb
+D:\FIS\Framework\FIS.SSD\SSO\Core.EntityFramework\obj\Debug\Core.EntityFramework.csprojResolveAssemblyReference.cache
+D:\FIS\Framework\FIS.SSD\SSO\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.dll
+D:\FIS\Framework\FIS.SSD\SSO\Core.EntityFramework\obj\Debug\IdentityServer3.EntityFramework.pdb

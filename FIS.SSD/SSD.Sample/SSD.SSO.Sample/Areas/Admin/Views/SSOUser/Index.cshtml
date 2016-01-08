@@ -1,0 +1,55 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "List User Logined";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<table style="width:600px">
+    <tr>
+        <td >
+            @using (Html.BeginForm("Index", "SSOUser", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Name">Tìm kiếm:</label>
+                        <div class="col-md-8">
+                            @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { @class = "form-control", @style = "max-width: 400px;" })
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Tìm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("User Name", "Index", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey })
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { username = item })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="7">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>
+

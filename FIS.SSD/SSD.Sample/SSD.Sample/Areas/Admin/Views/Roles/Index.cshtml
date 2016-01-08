@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SSD.Web.Models.Role>
+
+@{
+    ViewBag.Title = "Danh sách Roles";
+}
+<h2>@ViewBag.Title</h2>
+<table style="width:100%">
+    <tr>
+        <td style="width:500px">
+            @using (Html.BeginForm("Index", "Roles", FormMethod.Get))
+            {
+                <p>
+                    Tìm kiếm: @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { style = "width:500px" })
+                    <input type="submit" value="Tìm" />
+                </p>
+            }
+        </td>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="3">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>

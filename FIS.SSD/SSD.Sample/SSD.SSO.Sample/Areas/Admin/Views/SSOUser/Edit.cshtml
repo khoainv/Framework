@@ -1,0 +1,114 @@
+﻿@using SSD.Web.Models
+
+@{
+    ViewBag.Title = "Edit For User.";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            User name
+        </dt>
+        <dd>
+            @ViewBag.UserName
+        </dd>
+    </dl>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#TabGroups">Groups</a></li>
+    <li><a data-toggle="tab" href="#TabPermissions">Permissions</a></li>
+</ul>
+<div class="tab-content">
+    <div id="TabGroups" class="tab-pane fade in active">
+        <br />
+        <div class="form-group">
+            @Html.Label("Groups", new { @class = "control-label col-md-2" })
+            <span class=" col-md-10">
+                @foreach (SelectListItem item in ViewBag.Groups)
+                {
+                    <input type="checkbox" name="SelectedGroup" value="@item.Value" checked="@item.Selected" class="checkbox-inline" />
+                    @Html.Label(item.Text, new { @class = "control-label" })
+                    <br />
+                }
+            </span>
+        </div>
+    </div>
+    <div id="TabPermissions" class="tab-pane fade">
+        <br />
+        <table class="table">
+            <tr>
+                <th>
+                   AcctionKey
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            @if (ViewBag.Permissions != null)
+                        {
+                            IQueryable<Permission> lst = ViewBag.Permissions as IQueryable<Permission>;
+                            foreach (var group in lst.GroupBy(x => x.ControllerKey))
+                            {
+                    <tr class="group-header">
+                        <td colspan="2">
+                            <span class="h4">@group.Key.Replace("Controller", "")</span>
+                        </td>
+                    </tr>
+                    foreach (var item in group)
+                    {
+                        <tr class="odd">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AcctionKey)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                        </tr>
+                    }
+            }
+            }
+            @*@foreach (var item in ViewBag.Permissions)
+            {
+                <tr>
+                    <td>
+                        @item.ControllerKey
+                    </td>
+                    <td>
+                        @item.AcctionKey
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                </tr>
+            }*@
+        </table>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Save" class="btn btn-default" />
+    </div>
+</div>
+}
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@section Scripts {
+    <script type="text/javascript">
+        (function ($) {
+            $(function () {
+                $('.group-header').click(function () {
+                    $(this).nextUntil('.group-header').toggle();
+                });
+            });
+        })(jQuery);
+    </script>
+}
+
+

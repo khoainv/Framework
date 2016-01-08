@@ -1,0 +1,15 @@
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\UG.Framework.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\UG.Framework.pdb
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Mono.Security.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Newtonsoft.Json.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\PCLCrypto.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Replicon.Cryptography.SCrypt.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Validation.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Newtonsoft.Json.xml
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\PCLCrypto.xml
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Replicon.Cryptography.SCrypt.pdb
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Replicon.Cryptography.SCrypt.xml
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\bin\Debug\Validation.xml
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\obj\Debug\UG.Framework.csprojResolveAssemblyReference.cache
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\obj\Debug\UG.Framework.dll
+D:\UG2014\UGFramework\Src\Framework\UG.Framework\obj\Debug\UG.Framework.pdb

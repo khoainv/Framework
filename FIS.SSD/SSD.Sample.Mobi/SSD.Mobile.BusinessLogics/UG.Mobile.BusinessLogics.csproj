@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{DB947194-9A53-4A2C-A72C-3E60B9C7A001}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UG.Mobile.BusinessLogics</RootNamespace>
+    <AssemblyName>UG.Mobile.BusinessLogics</AssemblyName>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UG.Mobile.Agents\UG.Mobile.Agents.csproj">
+      <Project>{C311C808-3458-4BFF-9C26-7C9A92F557DF}</Project>
+      <Name>Sync7i.Mobile.Agents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sync7i.Mobile.BusinessEntities\Sync7i.Mobile.BusinessEntities.csproj">
+      <Project>{6823A810-E391-43B9-91E0-F100324785E0}</Project>
+      <Name>Sync7i.Mobile.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UG.Mobile.Common\UG.Mobile.Common.csproj">
+      <Project>{4CFCEB39-9CDA-46A3-9C0C-5AE075B7850C}</Project>
+      <Name>Sync7i.Mobile.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sync7i.Mobile.DataAccess\Sync7i.Mobile.DataAccess.csproj">
+      <Project>{B2F4A4E7-5582-4FE1-A43B-BEA52E7F9CC6}</Project>
+      <Name>Sync7i.Mobile.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\UG.Framework.Portable\UG.Framework.Portable.csproj">
+      <Project>{8B4044B2-C9AD-4E2F-90EA-420F7A46D6B3}</Project>
+      <Name>UG.Mobile.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Settings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Settings.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

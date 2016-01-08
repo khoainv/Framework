@@ -1,0 +1,209 @@
+﻿@model IdentityServer3.EntityFramework.Entities.Client
+
+@{
+    ViewBag.Title = "Details For Client.";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Enabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientUri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientUri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoUri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoUri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequireConsent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequireConsent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowRememberConsent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowRememberConsent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowClientCredentialsOnly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowClientCredentialsOnly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowAccessToAllScopes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowAccessToAllScopes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentityTokenLifetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentityTokenLifetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessTokenLifetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessTokenLifetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationCodeLifetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationCodeLifetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbsoluteRefreshTokenLifetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbsoluteRefreshTokenLifetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SlidingRefreshTokenLifetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SlidingRefreshTokenLifetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefreshTokenUsage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefreshTokenUsage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateAccessTokenOnRefresh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateAccessTokenOnRefresh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefreshTokenExpiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefreshTokenExpiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessTokenType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessTokenType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnableLocalLogin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnableLocalLogin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncludeJwtId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncludeJwtId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlwaysSendClientClaims)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlwaysSendClientClaims)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrefixClientClaims)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrefixClientClaims)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AllowAccessToAllGrantTypes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllowAccessToAllGrantTypes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

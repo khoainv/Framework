@@ -1,0 +1,49 @@
+﻿@using SSD.Framework.Email
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menus {
+    <li>@Html.ActionLink("Groups", "Index", "SSOGroups")</li>
+    <li>@Html.ActionLink("Permissions", "Index", "SSOPermission")</li>
+    <li>@Html.ActionLink("IoT Clients", "Index", "SSOIoTClients")</li>
+    @*<li>@Html.ActionLink("Thùng rác", "Index", "RecycleBin")</li>*@
+    <li>@Html.ActionLink("Config", "Index", "SSOAppConfigs")
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Mail Service", "ConfigExt", "SSOAppConfigs", new { typeName = typeof(SmtpData).FullName }, null)</li>
+        <li>@Html.ActionLink("Send Email Confirmation", "ConfigExt", "SSOAppConfigs", new { typeName = typeof(SmtpData).FullName }, null)</li>
+        <li>@Html.ActionLink("Two-Factor Authentication", "ConfigExt", "SSOAppConfigs", new { typeName = typeof(SSD.Web.Models.SMSServerData).FullName }, null)</li>
+        <li><a id="ClearManager" href="#">Clear Cache Security</a></li>
+        <li><a id="RestartApplication" href="#">Restart Application</a></li>
+    </ul>
+    </li>
+}
+@RenderBody()
+@section scripts {
+    @RenderSection("scripts", required: false)
+<script type="text/javascript">
+    (function ($) {
+        $("#ClearManager").click(function () {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("ClearManager", "SSOAppConfigs", routeValues: new { area = "Admin" })',
+                success: function (response) {
+                    // có eval() tránh fail
+                    alert("Clear log database successful")
+                }
+            });
+        });
+
+        $("#RestartApplication").click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: '@Url.Action("RestartApplication", "SSOAppConfigs", routeValues: new { area = "Admin" })',
+                    success: function (response) {
+                        // có eval() tránh fail
+                        alert("Restart application successful")
+                    }
+                });
+            });
+    })(jQuery);
+</script>
+
+}

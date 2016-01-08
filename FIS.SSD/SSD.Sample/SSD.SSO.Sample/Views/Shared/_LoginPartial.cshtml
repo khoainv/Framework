@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNet.Identity
+@using SSD.Web.Extensions
+@using SSD.Framework
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "SSOAccount", new { area = "" }, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        string manageLink = UGConstants.SSO.AuthorityBaseUri + "/manage";
+        
+        @Html.AntiForgeryToken()
+        <ul class="nav navbar-nav navbar-right">
+            @*<li>
+                @Html.ActionLink("Hello " + User.GetUserName() + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+            </li>*@
+            @*can using json and web api*@
+            <li><a id="manage" href="@manageLink">"Hello @User.GetUserName() !"</a></li>
+            <li><a id="ClearCache" href="#">Clear Cache</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        </ul>
+    }
+}
+else
+{
+    string registerLink = UGConstants.SSO.AuthorityBaseUri + "/account/register";
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a id="Register" href="@registerLink">Register</a></li>
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Log in", "Login", "SSOAccount", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

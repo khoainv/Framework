@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-controller="LayoutCtrl">
+<head>
+    <meta charset="utf-8" />
+    <title>{siteName}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link href="/Content/libs/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body lang="en">
+    <div class="wrapper">
+        <div class="form-signin">
+            <h2 class="form-signin-heading"><img src="/Content/libs/images/logo.png" /></h2>
+            <p>Would you like to logout of {{model.siteName}}?</p>
+            <form name="form" method="post" action="{{model.logoutUrl}}" style="margin-top:20px">
+                <anti-forgery-token token="model.antiForgery"></anti-forgery-token>
+                <fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Yes</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div>
+        <p style="text-align:center">UG - Single sign-on System.</p>
+    </div>
+    <script id='modelJson' type='application/json'>
+        {model}
+    </script>
+    <script src="/content/libs/jquery/jquery-1.11.0.min.js"></script>
+    <script src="/content/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/content/libs/angular/angular.1.2.13.min.js"></script>
+    <script src="/content/libs/encoder/encoder.min.js"></script>
+    <script src="/content/app/app.js"></script>
+</body>
+</html>
+
+

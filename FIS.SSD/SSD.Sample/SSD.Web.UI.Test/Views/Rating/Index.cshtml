@@ -1,0 +1,26 @@
+﻿@using SSD.Web.UI.Html
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadSection{
+    <link href="@Url.Content("~/Content/Rating/rateit.css")" rel="stylesheet" type="text/css" media="screen" title="no title" charset="utf-8">
+}
+<h2>
+    Index</h2>
+@Html.Rating("rate01",2.5)
+@Html.RatingAjax("Rating","Save","120","rate02",2.5)
+<script src="@Url.Content("~/Scripts/Rating/jquery.rateit.js")" type="text/javascript"></script>
+<img src="/Rating/RateChart" />
+<img src="/Rating/RateChart1" />
+@Html.IMStatus(new List<Nic>(){
+    new Nic(Protocol.yahoo,"khoai_nv","Xin chao"),
+    new Nic(Protocol.skype,"phuongdv3006","Xin chao")
+},"Nguyen Van Khoai")
+
+<div>
+    @*<img src="/Rating/GetRainfallChartBar" />
+    <img src="/Rating/GetRainfallChartPie" />
+    <img src="/Rating/GetRainfallChart" />
+    <img src="/Rating/GetMonths" />*@
+</div>

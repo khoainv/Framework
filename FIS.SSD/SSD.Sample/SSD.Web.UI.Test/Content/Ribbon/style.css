@@ -1,0 +1,105 @@
+﻿html
+{
+	overflow-x: hidden;
+	height: 100%;
+}
+
+body
+{
+    font-family: Calibri, Arial, Trebuchet MS;
+    font-size: 11pt;
+    padding: 0px;
+    margin: 0px;
+    color: #254264;
+    background-color: #DCE5F2;
+    background-image: url(images/background.png);
+    background-repeat: repeat-x;
+}
+
+h1
+{
+	font-family: Cambria, Arial, Trebuchet MS;
+	font-size: 14pt;
+}
+
+h2
+{
+	font-family: Cambria, Arial, Trebuchet MS;
+	font-size: 13pt;
+	color: #4E81C8;
+}
+
+img
+{
+    border: 0px;
+}
+
+a
+{
+    color: #254264;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+.menuContainer
+{
+    width: 100%;
+    background-color: #d9e4f3;
+    border: 1px solid #3b5a82;
+    border-bottom: 0px;
+    z-index:1001;
+    min-width:1000px;
+}
+
+.hide-show-menu
+{
+    float:right;
+    width:24px;
+    height:24px;
+    background-image: url(images/up.png);
+    margin:10px 5px 0 0 !important;
+    cursor:pointer;
+}
+.hide-menu
+{
+    background-image: url(images/up.png);
+}
+.show-menu
+{
+    background-image: url(images/down.png);
+}
+
+div.disable, li.disable
+{
+    /*background-image:none !important;*/
+    opacity:0.2;
+}
+.pin-unpin-ribbonmenu
+{
+    float:right;
+    width:24px;
+    height:24px;
+    margin:10px 5px 0 0 !important;
+    cursor:pointer;
+    background-image: url(images/pin_ribbonmenu.png);
+}
+.unpin-ribbonmenu
+{
+    background-image: url(images/unpin_ribbonMenu.png);
+}
+.pin-ribbonmenu
+{
+    background-image: url(images/pin_ribbonmenu.png);
+}
+
+.ug-logo-menu
+{
+    float:right;
+    height:24px;
+    margin:10px 5px 0 0 !important;
+    cursor:pointer;
+}

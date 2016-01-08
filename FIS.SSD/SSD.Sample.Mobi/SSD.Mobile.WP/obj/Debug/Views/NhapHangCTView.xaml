@@ -1,0 +1,126 @@
+﻿<Base:BaseMvxWindowsPage
+    xmlns:Base="using:SSD.Mobile.WP"
+    x:Class="SSD.Mobile.WP.Views.NhapHangCTView"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SSD.Mobile.WP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#e9eaed" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#3b73af"/>
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,10">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Name="menuIcon" Height="40" Width="40" HorizontalAlignment="Left" Source="/Assets/icon_menu.png" >
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding DataContext.BackMenuCommand, ElementName=LayoutRoot}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Image>
+                <TextBlock Foreground="White" Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="" FontSize="30"/>
+            </Grid>
+        </StackPanel>
+        <!--ContentPanel - place additional content here-->
+        <ScrollViewer x:Name="ContentPanel" Grid.Row="2"  Background="#e9eaed">
+        <Grid >
+            <Grid Background="#fff" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="5,5,0,0" Foreground="#3b73af" FontSize="24" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding Model.NgayTT,Converter={StaticResource DateFormat}}" />
+                <TextBlock Grid.Column="1" Margin="0,5,5,0" Foreground="#3b73af" FontSize="24" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.ConNo,Converter={StaticResource MoneyFormat}}" />
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Model.TenNCC}" />
+                <TextBlock Grid.Row="2" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Ngày giao: " />
+                <TextBlock Grid.Row="2" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.NgayGiao,Converter={StaticResource DateFormat}}" />
+                <TextBlock Grid.Row="3" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Trạng thái: " />
+                <TextBlock Grid.Row="3" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.TrangThai}" />
+                <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="Wrap" >
+                    <Run Text="Ghi chú: " ></Run>
+                    <Run Text="{Binding Model.GhiChu}" />
+                </TextBlock>
+                <ListView Grid.Row="5" Grid.ColumnSpan="2" ItemsSource="{Binding Model.ListNhapHangCT}" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.55*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="Wrap"  Text="{Binding Ten}" />
+                                <TextBlock Grid.Column="1" Margin="5,5,5,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="{Binding DVT}" />
+                                <TextBlock Grid.Column="2" Margin="5,5,5,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding SoLuong,Converter={StaticResource MoneyFormat}}" />
+                                <TextBlock Grid.Column="3" Margin="5,5,5,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding GiaNhap,Converter={StaticResource MoneyFormat}}" />
+                                <Border BorderBrush="#9a9a9a" Opacity="0.5" BorderThickness="0,0,1,0" Grid.Column="0" />
+                                <Border BorderBrush="#9a9a9a" Opacity="0.5" BorderThickness="0,0,1,0" Grid.Column="1" />
+                                <Border BorderBrush="#9a9a9a" Opacity="0.5" BorderThickness="0,0,1,0" Grid.Column="2" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+
+                <TextBlock Grid.Row="6" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Tiền hàng: " />
+                <TextBlock Grid.Row="6" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.TienHang,Converter={StaticResource MoneyFormat}}" />
+                <TextBlock Grid.Row="7" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Chiết khấu hàng: " />
+                <TextBlock Grid.Row="7" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.ChietKhauHang,Converter={StaticResource MoneyFormat}}" />
+                <TextBlock Grid.Row="8" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Chiết khấu đơn: " />
+                <TextBlock Grid.Row="8" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.ChietKhau,Converter={StaticResource MoneyFormat}}" />
+                <TextBlock Grid.Row="9" Margin="5,5,0,0" Foreground="#363636" FontSize="20" HorizontalAlignment="Left" TextWrapping="NoWrap" Text="Tổng tiền: " />
+                <TextBlock Grid.Row="9" Grid.Column="1"  Margin="0,5,5,5" Foreground="#363636" FontSize="20" HorizontalAlignment="Right" TextWrapping="NoWrap" Text="{Binding Model.TongTien,Converter={StaticResource MoneyFormat}}" />
+                <Border BorderBrush="#9a9a9a" Opacity="0.5" BorderThickness="0,1,0,1" Grid.Row="5" Grid.ColumnSpan="2"/>
+            </Grid>
+            <ProgressBar Width="480" Height="10" IsIndeterminate="True" Visibility="{Binding IsBusy, Converter={StaticResource VisibilityConverter}}" />
+        </Grid>
+        </ScrollViewer>
+    </Grid>
+    <views:MvxWindowsPage.BottomAppBar>
+        <CommandBar >
+            <CommandBar.Background>
+                <SolidColorBrush Color="#3b73af"></SolidColorBrush>
+            </CommandBar.Background>
+            <AppBarButton Label="Back" Icon="Back" Command="{Binding BackCommand}" HorizontalAlignment="Left">
+            </AppBarButton>
+        </CommandBar>
+    </views:MvxWindowsPage.BottomAppBar>
+</Base:BaseMvxWindowsPage>
+

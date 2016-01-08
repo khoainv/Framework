@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SSD.Web.Models.IoTClient>
+
+@{
+    ViewBag.Title = "IoT Clients";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<table style="width:100%">
+    <tr>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-default" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientSecret)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enable)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientSecret)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Enable)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClientId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClientId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClientId })
+        </td>
+    </tr>
+}
+    <tr>
+        <td colspan="6">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>

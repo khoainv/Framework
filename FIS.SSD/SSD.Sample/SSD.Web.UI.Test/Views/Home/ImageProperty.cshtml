@@ -1,0 +1,200 @@
+﻿<div id="panel_wrapper_detail" style="display: none;">
+    <div class="panel current" id="general_panel">
+        <table>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; width: 75%;">
+                        <fieldset class="imagePreview">
+                            <legend>Properties</legend>
+                            <table cellspacing="0" cellpadding="3" border="0" style="height: 150px;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="src">
+                                                URL</label>
+                                        </td>
+                                        <td colspan="3">
+                                            <input type="text" class="required" value="" id="src">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="alt">
+                                                Alternate Text</label>
+                                        </td>
+                                        <td colspan="3">
+                                            <input type="text" class="required" value="" id="alt">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="width">
+                                                Dimensions</label>
+                                        </td>
+                                        <td colspan="3">
+                                            <table cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" onchange="setDimensions();" value="" id="width" />
+                                                            x
+                                                            <input type="text" onchange="setDimensions();" value="" id="height" />
+                                                            <input type="hidden" value="" id="tmp_width" />
+                                                            <input type="hidden" value="" id="tmp_height" />
+                                                        </td>
+                                                        <td>
+                                                            <input type="checkbox" checked="checked" class="checkbox" id="constrain"><label for="constrain">Proportional</label>
+                                                        </td>
+                                                        <td>
+                                                            <div id="dim_loader">
+                                                                &nbsp;</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="align">
+                                                Alignment</label>
+                                        </td>
+                                        <td>
+                                            <select onchange="ImageManagerDialog.updateStyles();" id="align">
+                                                <option value="">--Not Set--</option>
+                                                <option value="top">Top</option>
+                                                <option value="middle">Middle</option>
+                                                <option value="bottom">Bottom</option>
+                                                <option value="left">Left</option>
+                                                <option value="right">Right</option>
+                                            </select>
+                                            <label class="hastip" for="clear" id="clearlabel">
+                                                Clear</label>
+                                            <select onchange="ImageManagerDialog.updateStyles();" id="clear">
+                                                <option value="">--Not Set--</option>
+                                                <option value="none">None</option>
+                                                <option value="both">Both</option>
+                                                <option value="left">Left</option>
+                                                <option value="right">Right</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="margin">
+                                                Margin</label>
+                                        </td>
+                                        <td colspan="3">
+                                            <label for="margin_top">
+                                                Top</label><input type="text" onchange="ImageManagerDialog.setMargins();" maxlength="3"
+                                                    size="3" value="" id="margin_top">
+                                            <label for="margin_right">
+                                                Right</label><input type="text" onchange="ImageManagerDialog.setMargins();" maxlength="3"
+                                                    size="3" value="" id="margin_right">
+                                            <label for="margin_bottom">
+                                                Bottom</label><input type="text" onchange="ImageManagerDialog.setMargins();" maxlength="3"
+                                                    size="3" value="" id="margin_bottom" disabled="">
+                                            <label for="margin_left">
+                                                Left</label><input type="text" onchange="ImageManagerDialog.setMargins();" maxlength="3"
+                                                    size="3" value="" id="margin_left" disabled="">
+                                            <input type="checkbox" onclick="ImageManagerDialog.setMargins();" id="margin_check"
+                                                class="checkbox"><label>Equal Values</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="hastip" for="border">
+                                                Border</label>
+                                        </td>
+                                        <td colspan="3">
+                                            <table cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" onclick="ImageManagerDialog.setBorder();" id="border" class="checkbox">
+                                                        </td>
+                                                        <td>
+                                                            <label for="border_width">
+                                                                Width</label>
+                                                            <select class="mceEditableSelect" onchange="ImageManagerDialog.updateStyles();" id="border_width"
+                                                                disabled="">
+                                                                <option value="">--Not Set--</option>
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="thin">thin</option>
+                                                                <option value="medium">medium</option>
+                                                                <option value="thick">thick</option>
+                                                                <option value="__mce_add_custom__" class="mceAddSelectValue">(Add Value)</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <label for="border_style">
+                                                                Style</label>
+                                                            <select onchange="ImageManagerDialog.updateStyles();" id="border_style" disabled="">
+                                                                <option value="">--Not Set--</option>
+                                                                <option value="none">none</option>
+                                                                <option value="solid">solid</option>
+                                                                <option value="dashed">dashed</option>
+                                                                <option value="dotted">dotted</option>
+                                                                <option value="double">double</option>
+                                                                <option value="groove">groove</option>
+                                                                <option value="inset">inset</option>
+                                                                <option value="outset">outset</option>
+                                                                <option value="ridge">ridge</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <label for="border_color">
+                                                                Color</label>
+                                                            <input type="text" onchange="TinyMCE_Utils.updateColor(this);ImageManagerDialog.updateStyles();"
+                                                                size="9" value="" id="border_color" disabled="">
+                                                        </td>
+                                                        <td id="border_color_pickcontainer">
+                                                            <a class="pickcolor" onmousedown="return false;" onclick="tinyMCEPopup.pickColor(event,'border_color');"
+                                                                href="javascript:;" id="border_color_pick_link"><span title="Browse" id="border_color_pick">
+                                                                </span></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <fieldset class="imagePreview">
+                            <legend>Preview</legend>
+                            <table cellspacing="0" cellpadding="3" border="0" style="height: 150px;">
+                                <tbody>
+                                    <tr>
+                                        <td style="vertical-align: top;">
+                                            <div class="preview">
+                                                <img alt="sample" src="/Content/FileManager/images/sample.jpg" id="sample" style="margin: 5px 0px 5px 5px;
+                                                    float: right;">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+
+</script>

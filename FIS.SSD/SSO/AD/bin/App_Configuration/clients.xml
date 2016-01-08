@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ClientConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClientSettings>
+    <ClientSetting>
+    <Id>Client_Test</Id>
+    <Name>Client Test AD</Name>
+    <Secret>client_test_ad</Secret>
+    <AccessTokenType>Jwt</AccessTokenType>
+    <ClientUri>http://localhost:2671/</ClientUri>
+    <LogoUri></LogoUri>
+    <RedirectUris>
+        <RedirectUri>http://localhost:2671/</RedirectUri>
+    </RedirectUris>
+    <PostLogoutRedirectUris>
+        <PostLogoutRedirectUri>http://localhost:2671/</PostLogoutRedirectUri>
+    </PostLogoutRedirectUris>
+    <AllowedCorsOrigins>
+        <AllowedCorsOrigin></AllowedCorsOrigin>
+    </AllowedCorsOrigins>
+    <IdentityTokenLifetime>360</IdentityTokenLifetime>
+    <AccessTokenLifetime>3600</AccessTokenLifetime>
+  </ClientSetting>
+    <ClientSetting>
+      <Id>SSO_Test</Id>
+      <Name>SSO Test AD</Name>
+      <Secret>sso_test_ad</Secret>
+      <AccessTokenType>Jwt</AccessTokenType>
+      <ClientUri>http://localhost:1379</ClientUri>
+      <LogoUri></LogoUri>
+      <RedirectUris>
+        <RedirectUri>http://localhost:1379/</RedirectUri>
+      </RedirectUris>
+      <PostLogoutRedirectUris>
+        <PostLogoutRedirectUri>http://localhost:1379/</PostLogoutRedirectUri>
+      </PostLogoutRedirectUris>
+      <AllowedCorsOrigins>
+        <AllowedCorsOrigin></AllowedCorsOrigin>
+      </AllowedCorsOrigins>
+      <IdentityTokenLifetime>360</IdentityTokenLifetime>
+      <AccessTokenLifetime>3600</AccessTokenLifetime>
+    </ClientSetting>
+</ClientSettings>
+</ClientConfig>

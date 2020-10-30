@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{3a2c51b1-b601-49cf-9c4c-711dbcd8a348}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>917eb5f1-d71f-4e4f-97a6-c68704478b01</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SSD.Framework.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BaseInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseJsonEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cryptography\AESEngine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\BaseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\BusinessException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\HTTPException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\JsonParserException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\OpenConnectionSQLException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\UnknownException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EnumGuidAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IntExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ObservableCollectionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\XMLExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\BaseToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\LoginResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\UGPermissionAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\UserAuthen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Singleton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\AuthorizeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\Base64Url.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\BasicAuthenticationHeaderValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\EpochTimeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\HttpClientExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\IntrospectionClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\IntrospectionRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\IntrospectionResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\JwtClaimTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\OAuth2Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\OAuth2Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\TokenResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\UserInfoClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SSOClient\UserInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UGConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Week.cs" />
+  </ItemGroup>
+</Project>

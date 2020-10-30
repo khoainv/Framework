@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menus {
+@if (Request.IsAuthenticated)
+{
+    <li>@Html.ActionLink("Claim", "Claim", "Home", routeValues: new { area = "" }, htmlAttributes: null)</li>
+}
+<li>@Html.ActionLink("Giới thiệu", "About", "Home", routeValues: new { area = "" }, htmlAttributes: null)</li>
+<li>@Html.ActionLink("Liện hệ", "Contact", "Home", routeValues: new { area = "" }, htmlAttributes: null)</li>
+}
+@RenderBody()
+
+@RenderSection("scripts", required: false)

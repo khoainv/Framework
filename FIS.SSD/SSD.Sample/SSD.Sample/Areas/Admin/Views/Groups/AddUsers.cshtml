@@ -1,0 +1,102 @@
+﻿@model SSD.Web.Models.Group
+
+@{
+    ViewBag.Title = "Thêm người dùng vào Group";
+    SSD.Web.Mvc.Models.Pager<string> pager = ViewBag.UserPaging as SSD.Web.Mvc.Models.Pager<string>;
+}
+
+<h4>@ViewBag.Title</h4>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<table style="width:100%">
+    <tr>
+        <td style="width:600px">
+            @using (Html.BeginForm("AddUsers", "Groups", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Name">Tìm kiếm:</label>
+                        <div class="col-md-8">
+                            @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { @class = "form-control", @style = "max-width: 400px;" })
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Tìm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </td>
+        <td style="text-align:right">
+            @using (Html.BeginForm("AddUsers", "Groups", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-5" for="Name">Thêm người dùng:</label>
+                        <div class="col-md-5">
+                            @Html.TextBox("UserName", string.Empty, new { @class = "form-control", @style = "max-width: 200px;" })
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Thêm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                <p style="color:red">@ViewBag.NotExistUser</p>
+            }
+        </td>
+    </tr>
+</table>
+@if (pager != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.ActionLink("User Name", "AddUsers", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey })
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in pager)
+        {
+            <tr>
+                <td>
+                    @item
+                </td>
+                <td>
+                    @Html.ActionLink("View User", "ViewUser", "Users", new { userName = item }, null) |
+                    @if (item != SSD.Framework.UGConstants.AccountAdmin)
+                    {
+                        @Ajax.ActionLink("Delete", "DeleteInGroup", new { GroupId = ViewBag.GroupId, userName = item, sortOrder = ViewBag.CurrentSort, SearchString = ViewBag.CurrentSearchKey, page = ViewBag.Page }, new AjaxOptions { HttpMethod = "POST" })
+                    }
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="4">
+                @Html.Partial("_PagingPartial", pager)
+            </td>
+        </tr>
+    </table>
+}
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,44 @@
+﻿@model SSD.Web.Models.User
+
+@{
+    ViewBag.Title = "Details For User.";
+}
+
+<h4>@ViewBag.Title</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+    </dl>
+</div>
+<h4>List of groups for this user</h4>
+@if (ViewBag.GroupNames.Count == 0)
+{
+    <hr />
+    <p>No groups found for this user.</p>
+}
+
+<table class="table">
+
+    @foreach (var item in ViewBag.GroupNames)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+

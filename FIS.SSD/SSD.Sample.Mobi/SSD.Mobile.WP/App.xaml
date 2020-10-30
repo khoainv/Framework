@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="SSD.Mobile.WP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SSD.Mobile.WP">
+    <Application.Resources>
+        <local:NativeVisibilityConverter x:Key="VisibilityConverter"/>
+        <local:StringFormatConverter x:Name="StringFormat"/>
+        <local:MoneyFormatConverter x:Name="MoneyFormat"/>
+        <local:DateFormatConverter x:Name="DateFormat"/>
+        <local:DateTimeFormatConverter x:Name="DateTimeFormat"/>
+        <local:VisibilityDateTypeConverter x:Name="VisibilityDateTypeConverter"/>
+    </Application.Resources>
+</Application>

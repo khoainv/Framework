@@ -1,0 +1,36 @@
+﻿@*@if (ViewBag.TypeName == typeof(UG.BusinessLogics.CompaniesBiz).FullName)
+    {
+        @model IEnumerable<UG.BusinessEntities.Companies>
+    }
+else if (ViewBag.TypeName == typeof(UG.BusinessLogics.ComLocationStoreBiz).FullName)
+{
+    @model IEnumerable<UG.BusinessEntities.ComLocationStore>
+}*@
+
+
+@{
+    ViewBag.Title = "Thùng rác";
+}
+
+<h2>@ViewBag.Title</h2>
+<table style="width:100%">
+    <tr>
+        <td style="width:500px">
+            @using (Html.BeginForm("Index", "RecycleBin", FormMethod.Get))
+            {
+                <p>
+                    @Html.DropDownList("BizID", null, htmlAttributes: new { @class = "form-control", onchange = "this.form.submit();" })
+                </p>
+            }
+        </td>
+        <td style="text-align:right"><p>@Html.ActionLink("Map", "Map")</p> </td>
+    </tr>
+</table>
+@if (ViewBag.TypeName == typeof(UG.BusinessLogics.CompaniesBiz).FullName)
+{
+Html.RenderPartial("~/Areas/Admin/Views/Companies/_ComPagingPartial.cshtml", (object)ViewBag.ModelObj);
+}
+else if (ViewBag.TypeName == typeof(UG.BusinessLogics.ComLocationStoreBiz).FullName)
+{
+Html.RenderPartial("~/Areas/Manager/Views/ComLocationStores/_LocPagingPartial.cshtml", (object)ViewBag.ModelObj);
+}

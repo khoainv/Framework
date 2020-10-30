@@ -1,0 +1,289 @@
+﻿@model IdentityServer3.EntityFramework.Entities.Client
+
+@{
+    ViewBag.Title = "Create Client.";
+}
+
+<h4>@ViewBag.Title</h4>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    string ClientSecret = ViewBag.ClientSecret;
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#TabMain">Main</a></li>
+            <li><a data-toggle="tab" href="#TabInfo">Info</a></li>
+            <li><a data-toggle="tab" href="#TabScopes">Scopes</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="TabMain" class="tab-pane fade in active">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Enabled, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.Enabled)
+                            @Html.ValidationMessageFor(model => model.Enabled, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClientId, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ClientId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClientName, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ClientName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ClientName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClientUri, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ClientUri, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ClientUri, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("ClientSecret", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="text" name="ClientSecret" value="@ViewBag.ClientSecret" readonly="readonly" class="form-control" />
+                        @Html.ValidationMessage("ClientSecret", "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("RedirectUri", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.Editor("RedirectUri", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessage("RedirectUri", "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    @Html.Label("PostLogoutRedirectUri", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.Editor("PostLogoutRedirectUri", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessage("PostLogoutRedirectUri", "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div id="TabInfo" class="tab-pane fade">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LogoUri, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.LogoUri, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LogoUri, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RequireConsent, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.RequireConsent)
+                            @Html.ValidationMessageFor(model => model.RequireConsent, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AllowRememberConsent, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.AllowRememberConsent)
+                            @Html.ValidationMessageFor(model => model.AllowRememberConsent, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Flow, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EnumDropDownListFor(model => model.Flow, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Flow, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AllowClientCredentialsOnly, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.AllowClientCredentialsOnly)
+                            @Html.ValidationMessageFor(model => model.AllowClientCredentialsOnly, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AllowAccessToAllScopes, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.AllowAccessToAllScopes)
+                            @Html.ValidationMessageFor(model => model.AllowAccessToAllScopes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdentityTokenLifetime, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.IdentityTokenLifetime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.IdentityTokenLifetime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AccessTokenLifetime, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.AccessTokenLifetime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AccessTokenLifetime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AuthorizationCodeLifetime, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.AuthorizationCodeLifetime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AuthorizationCodeLifetime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AbsoluteRefreshTokenLifetime, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.AbsoluteRefreshTokenLifetime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AbsoluteRefreshTokenLifetime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SlidingRefreshTokenLifetime, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.SlidingRefreshTokenLifetime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SlidingRefreshTokenLifetime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RefreshTokenUsage, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EnumDropDownListFor(model => model.RefreshTokenUsage, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RefreshTokenUsage, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UpdateAccessTokenOnRefresh, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.UpdateAccessTokenOnRefresh)
+                            @Html.ValidationMessageFor(model => model.UpdateAccessTokenOnRefresh, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RefreshTokenExpiration, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EnumDropDownListFor(model => model.RefreshTokenExpiration, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RefreshTokenExpiration, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AccessTokenType, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EnumDropDownListFor(model => model.AccessTokenType, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.AccessTokenType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EnableLocalLogin, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.EnableLocalLogin)
+                            @Html.ValidationMessageFor(model => model.EnableLocalLogin, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IncludeJwtId, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IncludeJwtId)
+                            @Html.ValidationMessageFor(model => model.IncludeJwtId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AlwaysSendClientClaims, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.AlwaysSendClientClaims)
+                            @Html.ValidationMessageFor(model => model.AlwaysSendClientClaims, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PrefixClientClaims, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.PrefixClientClaims)
+                            @Html.ValidationMessageFor(model => model.PrefixClientClaims, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AllowAccessToAllGrantTypes, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.AllowAccessToAllGrantTypes)
+                            @Html.ValidationMessageFor(model => model.AllowAccessToAllGrantTypes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="TabScopes" class="tab-pane fade">
+                @foreach (SelectListItem item in ViewBag.Scopes)
+                {
+                    <div class="form-group">
+                        @Html.Label(item.Text, new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <input type="checkbox" name="selectedScopes" value="@item.Text" checked="@item.Selected" class="checkbox-inline" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-9">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

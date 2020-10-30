@@ -1,0 +1,73 @@
+﻿@using SSD.Web.Models
+@model SSD.Web.Models.Permission
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Application Permission</h2>
+
+<div>
+	<hr />
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#TabMain">Main</a></li>
+        <li><a data-toggle="tab" href="#TabUsers">Users</a></li>
+        <li><a data-toggle="tab" href="#TabGroups">Groups</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="TabMain" class="tab-pane fade in active">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ControllerKey)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ControllerKey)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AcctionKey)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AcctionKey)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            </dl>
+        </div>
+        <div id="TabUsers" class="tab-pane fade">
+            <br/>
+            <table class="table">
+                @foreach (UserGroup item in ViewBag.Users)
+            {
+                    <tr>
+                        <td>
+                            @item.UserName
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div id="TabGroups" class="tab-pane fade">
+            <br />
+            <table class="table">
+                @foreach (Group item in ViewBag.Groups)
+                {
+                    <tr>
+                        <td>
+                            @item.Name
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <p>
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+
+

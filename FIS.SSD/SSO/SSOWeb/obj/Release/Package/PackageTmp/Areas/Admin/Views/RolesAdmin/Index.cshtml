@@ -1,0 +1,65 @@
+﻿@model IEnumerable<UG.SSO.Identity.ApplicationRole>
+
+@{
+    ViewBag.Title = "Danh sách Roles";
+}
+<h4>@ViewBag.Title</h4>
+<table style="width:100%">
+    <tr>
+        <td style="width:600px">
+            @using (Html.BeginForm("Index", "RolesAdmin", FormMethod.Get))
+            {
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-2" for="Name">Tìm kiếm:</label>
+                        <div class="col-md-8">
+                            @Html.TextBox("SearchString", ViewBag.CurrentSearchKey as string, new { @class = "form-control", @style = "max-width: 400px;" })
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Tìm" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </td>
+        <td style="text-align:right">
+            <p>
+                @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-default" })
+            </p>
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, SearchString = ViewBag.CurrentSearchKey })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td colspan="3">
+            @Html.Partial("_PagingPartial", Model)
+        </td>
+    </tr>
+</table>

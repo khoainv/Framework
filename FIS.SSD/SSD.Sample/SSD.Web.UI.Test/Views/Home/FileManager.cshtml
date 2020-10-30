@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "FileManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadSection{
+    <link href="@Url.Content("~/Content/FileManager/css/elfinder.css")" rel="stylesheet" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href="@Url.Content("~/Content/JQueryUI/smoothness/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.14.custom.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/elfinder.full.js")"               type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.vi.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.ru.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.cs.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.el.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.es.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.fr.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.hu.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.it.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.lv.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.nl.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.pl.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.ua.js")"    type="text/javascript" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/FileManager/i18n/elfinder.zh_TW.js")" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+		#close, #open, #dock, #undock, #destroy {
+			width: 100px;
+			position:relative;
+			display: -moz-inline-stack;
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1;
+			*display: inline;
+			margin:0 3px 3px 0;
+			padding:1px 0;
+			text-align:center;
+			border:1px solid #ccc;
+			background-color:#eee;
+			margin:1em .5em;
+			padding:.3em .7em;
+			border-radius:5px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			cursor:pointer;
+		}
+	</style>
+}
+<h2>
+    FileManager</h2>
+@*<div id="open">open</div><div id="close">close</div><div id="dock">dock</div><div id="undock">undock</div>
+	<div id="finder">finder</div>
+
+    <script type="text/javascript" charset="utf-8">
+        $().ready(function () {
+            var f = $('#finder').elfinder({
+                url: '/Home/Files/',
+                lang: 'vi',
+                docked: true
+                //	            editorCallback: function (url) { window.console.log(url) },
+                //	            closeOnEditorCallback: false,
+                //	            selectMultiple: true,
+                //	            dialog: {
+                //	                title: 'File manager',
+                //	                height: 500
+                //	            }
+            })
+
+            // window.console.log(f)
+
+            $('#close,#open,#dock,#undock,#destroy').click(function () {
+                $('#finder').elfinder($(this).attr('id'));
+            })
+        })
+	</script>*@
+@using SSD.Web.UI.Html
+@Html.FileManager()
+<div id="panel_preview" style="display: none;">
+</div>
+<script type="text/javascript" charset="utf-8">
+    $().ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Home/ImageProperty",
+            success: function (data, textStatus, xhr) {
+                $('div#panel_preview').html(data);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert(xhr.responseText);
+            }
+        });
+    })
+
+                                                                
+    
+</script>

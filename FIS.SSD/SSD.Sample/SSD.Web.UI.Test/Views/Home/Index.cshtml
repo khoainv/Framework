@@ -1,0 +1,54 @@
+﻿@using SSD.Web.UI.Html
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadSection{
+    @*Captcha*@
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+}
+<div id="popupabcde12345" style="display:none;">
+        <h3>
+            SimleText:</h3>
+        @Html.Editor("popupSimleText")
+        <h3>
+            Description:</h3>
+        @Html.TextArea("popupDescription", null, 15, 30, null)
+</div>
+<div id="abcde12345">
+@using (Html.BeginForm())
+    {
+        <h3>
+            SimleText:</h3>
+        @Html.Editor("SimleText")
+        <h3>
+            Description:</h3>
+        @Html.TextArea("Description", null, 15, 30, null)
+        
+        <br />
+        //the second parameter is the number of characters
+        @Html.Captcha(6)
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+   
+    }
+    </div>
+@*@Html.Partial("Editor")
+@{Html.RenderPartial("FileManager");}*@
+@Html.TagCloud(new SSD.Web.UI.Tags.TagCloud(new Dictionary<string, int> {
+                        {"C#", 58},
+                        {"ASP.NET", 45},
+                        {"VB.NET", 36}
+                    },
+                        new SSD.Web.UI.Tags.TagCloudGenerationRules
+                    {
+                        TagToolTipFormatString = "Tag count: {0}",
+                        TagUrlFormatString = "/Articles/Search?searchText={0}",
+                        MaxNumberOfTags = 30,
+                        Order = SSD.Web.UI.Tags.TagCloudOrder.WeightDescending,
+                        RequiredTagWeight = 10,
+                        TagCssClassPrefix = "TagWeightGroup",
+                        WeightClassPartitioning = new System.Collections.ObjectModel.ReadOnlyCollection<int>(new[] { 10, 30, 30, 30 }),
+                        HtmlAttributes = new Dictionary<string, object> { { "style", "font-weight:bold;" } }
+                    }).Tags)

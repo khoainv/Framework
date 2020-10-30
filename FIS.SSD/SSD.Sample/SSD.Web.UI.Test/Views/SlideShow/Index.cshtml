@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "SlideShow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadSection{
+    <link href="@Url.Content("~/Content/SlideShow/Pretty/css/prettyPhoto.css")" rel="stylesheet" type="text/css" >
+    <link href="@Url.Content("~/Content/SlideShow/Pretty/css/tiny.scroller.css")" rel="stylesheet" type="text/css" >
+    <script src="@Url.Content("~/Scripts/SlideShow/Pretty/jquery.prettyPhoto.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/SlideShow/Pretty/tiny.scroller.js")" type="text/javascript"></script>
+
+    <link href="@Url.Content("~/Content/SlideShow/Nivo/nivo-slider.css")" rel="stylesheet" type="text/css">
+    <script src="@Url.Content("~/Scripts/SlideShow/Nivo/jquery.nivo.slider.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Content/SlideShow/Nivo/themes/default/default.css")" rel="stylesheet" type="text/css" >
+    <link href="@Url.Content("~/Content/SlideShow/Nivo/themes/orman/orman.css")" rel="stylesheet" type="text/css" >
+    <link href="@Url.Content("~/Content/SlideShow/Nivo/themes/pascal/pascal.css")" rel="stylesheet" type="text/css" >
+
+    <link href="@Url.Content("~/Content/SlideShow/oSlide/oSlide.css")" rel="stylesheet" type="text/css" >
+    <script src="@Url.Content("~/Scripts/SlideShow/oSlide/jquery.oSlide-0.9.2.js")" type="text/javascript"></script>
+}
+<h2>SlideShow</h2>
+@using SSD.Web.UI.Html
+@Html.SlideShowOnPage((List<SSD.Web.PictureCore>)Model, ThemesSlideShowOnPage.Pascal)
+@Html.Partial("AjaxSlideShow")
+@Html.SlideShow((List<SSD.Web.PictureCore>)Model)

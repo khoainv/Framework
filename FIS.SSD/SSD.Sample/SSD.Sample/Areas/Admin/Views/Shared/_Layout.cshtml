@@ -1,0 +1,38 @@
+﻿@using SSD.Framework.Email
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menus {
+<li>@Html.ActionLink("Groups", "Index", "Groups")</li>
+<li>@Html.ActionLink("Permissions", "Index", "Permission")</li>
+<li>@Html.ActionLink("IoT Clients", "Index", "IoTClients")</li>
+    <li>@Html.ActionLink("Config", "Index", "AppConfigs")
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Ext Authentication", "ConfigExt", "AppConfigs", new { typeName=typeof(SSD.Web.Models.ExtAuthentication).FullName },null)</li>
+        <li>@Html.ActionLink("Ext Authen OpenId", "ConfigExt", "AppConfigs", new { typeName = typeof(SSD.Web.Models.ExtAuthenticationOpenIdConnect).FullName }, null)</li>
+        <li>@Html.ActionLink("Mail Service", "ConfigExt", "AppConfigs", new { typeName = typeof(SmtpData).FullName }, null)</li>
+        <li>@Html.ActionLink("Send Email Confirmation", "ConfigExt", "AppConfigs", new { typeName = typeof(SmtpData).FullName }, null)</li>
+        <li>@Html.ActionLink("Two-Factor Authentication", "ConfigExt", "AppConfigs", new { typeName = typeof(SSD.Web.Models.SMSServerData).FullName }, null)</li>
+        <li><a id="ClearLogDB" href="#">Clear Cache</a></li>
+    </ul>
+    </li>
+}
+@RenderBody()
+@section scripts {
+    @RenderSection("scripts", required: false)
+<script type="text/javascript">
+    (function ($) {
+        $("#ClearLogDB").click(function () {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("ClearLogBD", "AppConfigs", routeValues: new { area = "Admin" })',
+                success: function (response) {
+                    // có eval() tránh fail
+                    alert("Clear log database successful")
+                }
+            });
+        });
+    })(jQuery);
+</script>
+
+}

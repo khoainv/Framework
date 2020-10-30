@@ -1,0 +1,13 @@
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Sync7i.Mobile.Common.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Sync7i.Mobile.Common.pdb
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\UG.Mobile.Framework.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\PCLCrypto.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Newtonsoft.Json.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Validation.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\UG.Mobile.Framework.pdb
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\PCLCrypto.xml
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Newtonsoft.Json.xml
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\bin\Debug\Validation.xml
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\obj\Debug\Sync7i.Mobile.Common.csprojResolveAssemblyReference.cache
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\obj\Debug\Sync7i.Mobile.Common.dll
+D:\UG2014\RestaurantRating\UG.Mobilization\Sync7i.Mobile.Common\obj\Debug\Sync7i.Mobile.Common.pdb
